@@ -11,3 +11,7 @@ Model description:
 6. The model achieved a Top 5 accuracy of 0.5 over the baseline of 0.42. The baseline model consisted of 5 most frequently used tags in the input.
 
 The model is at the heart of the application, which was developed using HTML, CSS and Flask and dockerised. 
+
+
+https://user-images.githubusercontent.com/77821166/151679179-968b2849-1eaf-42ed-959b-5c93fb5044a6.mp4
+
