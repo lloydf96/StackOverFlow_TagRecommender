@@ -1,0 +1,112 @@
+
+
+body{
+
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+align-items: top;
+display: flex;
+flex-direction: column;
+padding: 20px 20px
+
+}
+section.title{
+    .title-name{
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 70px;
+        margin-top:100px;
+        margin-left:38em;
+    }
+}
+section.qn{
+    .qn-input{
+        align-items:center;
+        margin-left:5em;
+        display:flex;
+        flex-direction: column;
+       
+
+
+    }
+    .qn-input form{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items:center;
+    }
+    input, textarea{
+        width: 50em;
+        height: 40px;
+        border-radius: 20px;
+        border: 2px solid rgb(5, 5, 121);
+        box-sizing: border-box;
+        font-size: 20px;
+        
+        background-position:20px 10px;
+        display:inline-block;
+        padding-left: 20px;
+        margin-bottom:20px;
+
+    }
+    
+    input[type="submit"]{
+        
+        width: 200px;
+        height: 40px;
+        background-color: white;
+        color:  rgb(5, 5, 121);
+        font-weight: bold;
+        font-size: 15px;
+        border: 2px solid rgb(5, 5, 121);
+        display:inline-block;
+        
+        cursor: pointer;
+    
+    }
+    input[type=submit]:hover {
+        background-color:rgb(5, 5, 121) ;
+        color: white;
+      }
+
+
+}
+
+section.get-tags{
+    align-items:center;
+    display:flex;
+    flex-direction: column;
+    margin-left: 70px;
+    .get-tags-class{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        background: lightblue;
+        border: 2px solid rgb(5, 5, 121);
+        color:  rgb(5, 5, 121);
+        width:400px;
+        border-radius: 10px;
+        padding: 20px;
+        
+    }
+
+ul.tag-list{
+        
+        text-align:left;
+        color:  rgb(5, 5, 121);
+        padding-left: 45%;
+        list-style-type:none;
+        text-decoration: none;
+        li{
+            font-size: 20px;
+            padding: 3px;
+            a{
+                
+                text-decoration:none;
+                color:  rgb(5, 5, 121);
+            }
+        }
+}
+}
+
+
+

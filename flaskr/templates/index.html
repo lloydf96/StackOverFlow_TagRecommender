@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>StackOverFlow Tagging</title>
+
+</head>
+<body>
+
+    <section class="title">
+        <div class="title-name">
+            <h1>Tag a StackOverFlow Question!:</h1>
+        </div>
+    
+    </section>
+
+    <section class="qn">
+        <div class="container">
+            <div class="qn-input">
+                <form action="/", method="post">
+                    
+                    <input type="text" id="question-input" cols="50" name="question-input" placeholder="Write a Question"> <!id should be same as for label>
+                    <input type="submit" class="find-tag" id="find-tag" name="find-tag" value="Recommend a Tag!">
+                </form>
+            </div>
+        </div>
+    </section>
+
+<section class="get-tags">
+    <div class="get-tags-class">
+        {% if recommended_tags %}
+        <h3>Recommended Tags are</h3>
+        <ul class="tag-list"> 
+
+            {% for tag in recommended_tags%}
+                    
+            <li >
+                <a href="#">{{tag}}</a>
+            </li>
+            {% endfor %}
+
+        </ul>
+        {% endif %}
+        <!-- {% if class_list%}
+        <h3>Found the following classes</h3>
+        <ul class="class-list"> 
+
+            {% for class in class_list%}
+            
+            <li >
+                <a href="#">{{class}}</a>
+            </li>
+            {% endfor %}
+            
+        </ul>
+        {% endif %} -->
+    </div>
+</section>
+
+</body>
+</html>
+
