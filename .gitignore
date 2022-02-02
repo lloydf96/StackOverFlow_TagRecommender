@@ -1,1 +1,3 @@
 venv/*
+train/model/*
+train/input/*
