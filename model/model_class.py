@@ -4,11 +4,16 @@ import torch.nn as nn
 import torch.nn.functional as F
 import sys
 sys.path.append('model')
-
 class DNN(nn.Module):
     def __init__(self,input_dim,output_dim,model_tags,metric = 'cosine',k = 5):
         super(DNN, self).__init__()
-        self.L1 = nn.Sequential(nn.Linear(input_dim,100),
+        self.L1 = nn.Sequential(nn.Linear(input_dim,1000),
+                                nn.BatchNorm1d(1000),
+                                nn.ReLU(),
+                                nn.Linear(1000,500),
+                                nn.BatchNorm1d(500),
+                                nn.ReLU(),
+                                nn.Linear(500,100),
                                 nn.BatchNorm1d(100),
                                 nn.ReLU(),
                                 nn.Linear(100,100),
@@ -20,15 +25,8 @@ class DNN(nn.Module):
                                 nn.Linear(100,75),
                                 nn.BatchNorm1d(75),
                                 nn.ReLU(),
-                                nn.Linear(75,75),
-                                nn.BatchNorm1d(75),
-                                nn.ReLU(),
-                                nn.Linear(75,75),
-                                nn.BatchNorm1d(75),
-                                nn.ReLU(),
                                 nn.Linear(75,50),
-                                nn.ReLU(),
-                                nn.Linear(50,50),
+                                nn.BatchNorm1d(50),
                                 nn.ReLU()
                                 )
 
@@ -64,4 +62,3 @@ class DNN(nn.Module):
         else :
 #             print(torch.sum((tag - self.model_tags_vector)**2,dim = 1).shape)
             return -1*torch.sum((tag - self.model_tags_vector)**2,dim = 1)
-    

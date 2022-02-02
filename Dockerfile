@@ -16,7 +16,8 @@ WORKDIR /app
 # use --proxy http://<proxy host>:port if you have proxy
 RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-# RUN pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip install torch==1.9.1+cu111 
+#torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
 WORKDIR flaskr
 # In Docker, the containers themselves can have applications running on ports. To access these applications, we need to expose the containers internal port and bind the exposed port to a specified port on the host.

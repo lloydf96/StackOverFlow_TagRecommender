@@ -110,7 +110,6 @@ if __name__ == '__main__':
     neighbours_from_graph = pd.DataFrame(data = {'label':list(tag_dict.keys()),'neighbours_from_graph':tag_dict.values()}) 
     neighbours_from_graph= pd.DataFrame(data = {'label':list(tag_dict.keys()),'neighbours_from_graph':tag_dict.values()})   
     neighbours_from_graph.set_index('label',inplace = True)
-    #neighbour_data = pd.DataFrame(data = {"label" : list(nearest_label.keys()),"neighbours" : nearest_label.values()})
     neighbour_data.set_index('label',inplace = True)
     neighbours = pd.concat([neighbours_from_graph,neighbour_data],axis = 1)
     neighbours['similar_tags'] = neighbours.apply(lambda x : len(set(x[0]).intersection(set(x[1]))),axis = 1)
